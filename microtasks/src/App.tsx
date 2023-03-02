@@ -125,7 +125,7 @@ const App = () => {
     { banknote: "ruble", nominal: 50, number: "h123456789" },
   ]);
 
-  let [filter, setFilter] = useState<FilterType>('all')
+  let [filter, setFilter] = useState<string>('all')
   type FilterType = 'all' | 'dollar' | 'ruble' 
 
   let currentMoney 
@@ -133,16 +133,13 @@ const App = () => {
   filter === 'all' ? currentMoney = money : 
                      currentMoney = money.filter(item => item.banknote === filter)
  
-  const onClickHandler = ({/*str: FilterType*/}) => {
+  const onClickHandler = (str: string) => {
     
-    // setFilter(filter = str)
-
-    console.log('click');
-    
+    setFilter(filter = str)
   }
   
   return (
-   <NewComponent list = {currentMoney} clickHandler = {() => onClickHandler}/>
+   <NewComponent list = {currentMoney} clickHandler = {onClickHandler}/>
   )
 }
 export default App;

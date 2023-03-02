@@ -1,5 +1,5 @@
 type NewComponentPropsType = {
-  clickHandler: () => void, 
+  clickHandler: (str: string) => void, 
   list: ListType[]
 }
 
@@ -25,9 +25,9 @@ export const NewComponent = (props: NewComponentPropsType) => {
          )
        })}
      </ul>
-     <button value={"dollar"} onClick={() => clickHandler()}>dollar</button>
-     <button value={"ruble"} onClick={() => clickHandler()}>ruble</button>
-     <button value={"all"} onClick={() => clickHandler()}>all</button>
+     <button value={"dollar"} onClick={() => clickHandler('dollar')}>dollar</button>
+     <button value={"ruble"} onClick={() => clickHandler('ruble')}>ruble</button>
+     <button value={"all"} onClick={() => clickHandler('all')}>all</button>
    </>
  )
 }
