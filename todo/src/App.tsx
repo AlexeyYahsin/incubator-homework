@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Tasks } from './Tasks/Tasks';
+import { Tasks } from './components/Tasks/Tasks';
 
 
 // Hi Guys!
@@ -125,6 +125,7 @@ function App() {
             'Micheal Talbot95',
         ]
     }
+
 
     return (
         <div className="App">

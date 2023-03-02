@@ -21,9 +21,9 @@ export const Tasks = (props: TasksPropsType) => {
         <div>
             <h1>{title}</h1>
             <ul>
-                {tasks.map((element) => {
+                {tasks.map((element, index) => {
                     return(
-                        <li>
+                        <li key={index}>
                             <span>{element.taskId}</span>
                             <span>{element.title}</span>
                             <span>{element.isDone}</span>
@@ -32,9 +32,9 @@ export const Tasks = (props: TasksPropsType) => {
                 })}
             </ul>
             <ul>
-                {students.map((student)=>{
+                {students.map((student, index)=>{
                     return(
-                        <li>{student}</li>
+                        <li key={index}>{student}</li>
                     )
                 })}
             </ul>
