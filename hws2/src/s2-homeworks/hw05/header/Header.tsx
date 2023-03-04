@@ -1,7 +1,7 @@
 import React, {FC} from 'react'
 import burgerIcon from './burger.svg'
 import s from './Header.module.css'
-import {useLocation} from 'react-router-dom'
+// import {useLocation} from 'react-router-dom'
 import {PATH} from '../Pages'
 
 type PropsType = {
@@ -10,7 +10,7 @@ type PropsType = {
 
 export const Header: FC<PropsType> = ({handleOpen}) => {
     // hw5-menu изначально отсутствует, при нажатии на бургер - появляется, при повторном нажатии исчезает
-    const location = useLocation()
+    // const location = useLocation()
     const currentPath = location.pathname
 
     const pageName =

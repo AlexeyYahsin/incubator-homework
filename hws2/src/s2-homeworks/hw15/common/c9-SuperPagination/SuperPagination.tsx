@@ -1,6 +1,6 @@
 import React from 'react'
 import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
-import {Pagination} from '@mui/material'
+// import {Pagination} from '@mui/material'
 import s from './SuperPagination.module.css'
 
 export type SuperPaginationPropsType = {
@@ -28,7 +28,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
 
     return (
         <div className={s.pagination}>
-            <Pagination
+            {/* <Pagination
                 id={id + '-pagination'}
                 sx={{
                     // стили для Pagination // пишет студент
@@ -38,7 +38,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                 onChange={onChangeCallback}
                 hideNextButton
                 hidePrevButton
-            />
+            /> */}
 
             <span className={s.text1}>
                 показать
